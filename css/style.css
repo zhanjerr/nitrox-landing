@@ -20,7 +20,7 @@ Version:1.0;
 
 /* ==========================================================================
    1.0 Fonts
-   ========================================================================== */ 
+   ========================================================================== */
 /*Montserrat font*/
 @font-face {
   font-family: 'montserrat';
@@ -70,7 +70,7 @@ Version:1.0;
 /* ==========================================================================
    2.0 Reset css
    ========================================================================== */
-html, body { 
+html, body {
 	overflow-x: hidden;
 	font-size: 1em;
 	color: #616771;
@@ -108,10 +108,10 @@ a{
     background-color: transparent;
 }
 a:active,
-a:focus { 
+a:focus {
 	outline: 0;
     -moz-outline:0;
-    text-decoration: none; 
+    text-decoration: none;
 }
 a:hover{
 	text-decoration: none;
@@ -127,10 +127,10 @@ a:hover{
 	padding:150px 0px;
 }
 img{
-	max-width:100%; 
+	max-width:100%;
 	height: auto;
 }
-@keyframes blink {  
+@keyframes blink {
   50% { opacity: 0; }
 }
 .section-text{
@@ -146,7 +146,7 @@ img{
 	font-size:16px;
 	text-transform: uppercase;
 	font-weight: 700;
-	margin-bottom: 10px;  
+	margin-bottom: 10px;
 }
 .lead{
 	margin-bottom: 40px;
@@ -211,7 +211,7 @@ img{
 .sub-input .custom-form .btn{
 	text-transform: uppercase;
 	border-radius: 0 5px 5px 0;
-	-webkit-border-radius: 0 5px 5px 0; 
+	-webkit-border-radius: 0 5px 5px 0;
 	-moz-border-radius: 0 5px 5px 0;
 	position: absolute;
 	margin: 0;
@@ -287,13 +287,13 @@ img{
 	background: rgba(0,0,0,0.6);
 }
 .pad-0{
-	padding: 0px;	
+	padding: 0px;
 }
 .pl-0{
-	padding-left:0px;	
+	padding-left:0px;
 }
 .pr-0{
-	padding-right:0px;	
+	padding-right:0px;
 }
 .pb-0{
 	padding-bottom: 0;
@@ -384,8 +384,8 @@ img{
   left: 50%;
   top: 100%;
   border-left: 0;
-  border-left: 10px solid transparent; 
-  border-right: 10px solid transparent; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   border-top: 10px solid #39c05e;
   transform: translateX(-50%);
 }
@@ -402,7 +402,7 @@ img{
 .list-style{
 	position: relative;
 	margin-top: 30px;
-}	
+}
 .list-style li{
 	padding-left: 30px;
 }
@@ -419,6 +419,9 @@ img{
 }
 .clr-green{
 	color:#46da60;
+}
+.clr-purple{
+  color:#b070f5;
 }
 .clr-blue{
 	color: #0facf3;
@@ -466,7 +469,7 @@ img{
 	margin-right: 10px
 }
 .btn-round i:hover{
-	background-color:#fff; 
+	background-color:#fff;
 }
 .btn-round span{
 	color: #fff;
@@ -544,11 +547,11 @@ img{
  	background: #39c05e;
 }
 .theme-green .tab-menu .tab-list > a.active::after{
-	border-top-color:#39c05e; 
+	border-top-color:#39c05e;
 }
-.theme-blue .tab-menu .tab-list > a.active .fa, 
+.theme-blue .tab-menu .tab-list > a.active .fa,
 .theme-blue a:not(.btn-green):not(.btn-blue):not(.btn-red):not(.btn-white):not(.btn-border):hover,
-.theme-blue .list-style li:before, 
+.theme-blue .list-style li:before,
 .theme-blue .btn-round:hover i
 {
 	color:#0facf3;
@@ -558,11 +561,11 @@ img{
  	background: #0facf3;
 }
 .theme-blue .tab-menu .tab-list > a.active::after{
-	border-top-color:#0facf3; 
+	border-top-color:#0facf3;
 }
 .theme-red .tab-menu .tab-list > a.active .fa,
 .theme-red a:not(.btn-green):not(.btn-blue):not(.btn-red):not(.btn-white):not(.btn-border):hover,
-.theme-red .list-style li:before,  
+.theme-red .list-style li:before,
 .theme-red .btn-round:hover i
 {
 	color:#ff4954;
@@ -572,7 +575,7 @@ img{
  	background: #ff4954;
 }
 .theme-red .tab-menu .tab-list > a.active::after{
-	border-top-color:#ff4954; 
+	border-top-color:#ff4954;
 }
 /* ==========================================================================
     5.0 Navbar Styling
@@ -595,7 +598,7 @@ img{
 }
 .navbar-custom.affix{
 	position: fixed;
-} 
+}
 .navbar-custom .right-nav{
 	float: right;
 }
@@ -606,7 +609,7 @@ img{
 .navbar-custom .navbar-brand {
 	padding: 0px;
 	transition:0.5s;
-} 
+}
 .navbar-custom .navbar-brand.logo-clr, .navbar-custom.affix .navbar-brand.logo-light{
 	opacity: 0;
 	width: 0;
@@ -614,12 +617,12 @@ img{
 .navbar-custom.affix .navbar-brand.logo-clr, .navbar-custom .navbar-brand.logo-light{
 	opacity: 1;
 	width: auto;
-} 
+}
 .navbar-custom.affix .btn-border:hover{
 	background:#39c05e;
-	color: #fff; 
-	border-color:#39c05e; 
-}  
+	color: #fff;
+	border-color:#39c05e;
+}
 .navbar-custom .navbar-toggle {
 	border:0;
 	text-transform: uppercase;
@@ -640,7 +643,7 @@ img{
 	margin: 0 15px;
 }
 .navbar-custom ul li:last-chlid{
-	margin-right:0px; 
+	margin-right:0px;
 }
 .navbar-custom ul li a{
 	color: #fff;
@@ -662,7 +665,7 @@ img{
 }
 .navbar-custom.affix{
 	padding: 10px 0px;
-	border-bottom: 0px; 
+	border-bottom: 0px;
 	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 0 15px rgba(0,0,0,.2);
 	box-shadow: 0 0 15px rgba(0,0,0,.2);
@@ -915,7 +918,7 @@ img{
 	.navbar-collapse{
 		background: #fff;
 		padding: 20px 0;
-		overflow-x:hidden; 
+		overflow-x:hidden;
 	}
 	.sec-pad, .sec-pad-lg{
 		padding: 50px 0;
@@ -982,7 +985,7 @@ img{
 
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	.container{
 		padding-left: 35px;
@@ -1008,7 +1011,7 @@ img{
 		position: static;
 		width: 100%;
 		margin-top: 10px;
-		border-radius:5px; 
+		border-radius:5px;
 	}
 	.sub-input .custom-form label {
 	    top: 14%;
@@ -1021,7 +1024,7 @@ img{
 	}
 }
 
-/* Custom, iPhone Retina */ 
+/* Custom, iPhone Retina */
 @media only screen and (max-width : 360px) {
 	.navbar-brand img{
 		width: 120px;
