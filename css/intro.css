@@ -1,0 +1,564 @@
+/**
+Theme Name:Qubic App Landing Page
+Author:Themarlab
+Version:1.0;
+
+*/
+/**
+* Table of Contents
+ * 1.0 - Fonts
+ * 2.0 - Reset css
+ * 3.0 - navbar
+ * 4.0 - banner
+ * 5.0 - About app
+ * 6 .0 - Feature
+ * 7.0 - Specification
+ * 8.0 - Screenshot
+ * 09.0 - testimonial
+ * 10.0 - Team
+ * 11.0 - Download
+ * 12.0 - Pricing
+ * 13.0 - Faq
+ * 14.0 - blog
+ * 15.0 - Contact
+ * 16.0 - Footer
+ * 17.0 - Responsive
+
+/* ==========================================================================
+   1.0 Fonts
+   ========================================================================== */ 
+/*Montserrat font*/
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-bold-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-bold-webfont.ttf") format("truetype");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-regular-webfont.ttf") format("truetype");
+  font-weight: 400; }
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-semibold-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-semibold-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-semibold-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-semibold-webfont.ttf") format("truetype");
+  font-weight: 600; }
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat/montserrat-light-webfont.eot");
+  src: url("../fonts/montserrat/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-light-webfont.woff") format("woff"), url("../fonts/montserrat/montserrat-light-webfont.ttf") format("truetype");
+  font-weight: 300; }
+
+/*open sans font*/
+@font-face {
+	font-family: 'open_sans';
+	src:url('../fonts/open-sans/opensans-regular-webfont.eot');
+	src:url('../fonts/open-sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+		url('../fonts/open-sans/opensans-regular-webfont.woff') format('woff'),
+		url('../fonts/open-sans/opensans-regular-webfont.ttf') format('truetype');
+	font-weight: 400;
+
+}
+@font-face {
+	font-family: 'open_sans';
+	src:url('../fonts/open-sans/opensans-bold-webfont.eot');
+	src:url('../fonts/open-sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+		url('../fonts/open-sans/opensans-bold-webfont.woff') format('woff'),
+		url('../fonts/open-sans/opensans-bold-webfont.ttf') format('truetype');
+	font-weight: 600;
+
+}
+
+
+/* ==========================================================================
+   2.0 Reset css
+   ========================================================================== */
+html, body { 
+	overflow-x: hidden;
+	font-size: 16px;
+	color: #666;
+	font-family:'open_sans';
+	font-weight: 400;
+	line-height: 28px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'montserrat';
+	font-weight: 600;
+	margin: 0px;
+	color: #263238;
+}
+ul{
+	padding: 0px;
+}
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	outline: 0;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+}
+a:active,
+a:focus { 
+	outline: 0;
+    -moz-outline:0;
+    text-decoration: none; 
+}
+a:hover{
+	text-decoration: none;
+}
+.sec-pad{
+	padding:100px 0px;
+}
+.sec-pad-lg{
+	padding:150px 0px;
+}
+img{
+	max-width:100%; 
+	height: auto;
+}
+#preloader {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff;
+	z-index:10000;
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	background-image:url(../image/logo-clr.png);
+	animation: blink 1s linear infinite;
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px;
+}
+.section-text{
+	max-width: 600px;
+	margin: 0 auto 60px auto;
+}
+.meta-head{
+	font-size:16px;
+	color:#7b80de;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 10px;  
+}
+.section-heading{
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 50px;
+	padding-bottom: 10px;
+}
+.section-heading + p{
+	font-size: 20px;
+	font-weight: 300;
+}
+.light, .light h1,
+.light h2, .light h3, .light h4, .light h5, .light h6{
+	color: #fff;
+}
+.parallax-bg{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: cover;
+}
+.btn-holder{
+	margin-top: 20px;
+}
+.btn{
+	display: inline-block;
+	text-align: center;
+	border-radius: 5px;
+	min-width: 150px;
+	line-height: 40px;
+	font-size: 16px;
+	background: transparent;
+	font-family: 'montserrat';
+	font-weight: 400;
+	transition: 0.5s;
+	margin-right: 10px;
+}
+.btn-round span{
+	color: #fff;
+	font-size: 18px;
+}
+.btn-primary{
+	color: #fff;
+	background: rgb(255,101,165);
+	background: -moz-linear-gradient(left, rgba(255,101,165,1) 0%, rgba(255,137,101,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(255,101,165,1) 0%,rgba(255,137,101,1) 100%);
+	background: linear-gradient(to right, rgba(255,101,165,1) 0%,rgba(255,137,101,1) 100%);
+	border: 0;
+	box-shadow:0 20px 27px -3px rgba(86, 67, 206, 0.2);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary{
+	color: #fff;
+	background: #5b24fc;
+	border-color: #5b24fc;
+}
+.btn-secondary{
+	color:#FF66A3;
+	border:2px solid #FF66A3;  
+}
+.btn-secondary:hover{
+	color: #fff;
+	background: rgb(255,101,165);
+	background: -moz-linear-gradient(left, rgba(255,101,165,1) 0%, rgba(255,137,101,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(255,101,165,1) 0%,rgba(255,137,101,1) 100%);
+	background: linear-gradient(to right, rgba(255,101,165,1) 0%,rgba(255,137,101,1) 100%);
+	color: #fff;
+	border: 2px solid transparent;
+}
+.btn-border{
+	color: #fff;
+	background:transparent;
+	border-color: #fff;
+}
+.btn-border:hover{
+	background:#fff;
+	color: #4b43ce; 
+}
+.bg-gradient{
+	background: -moz-linear-gradient(left, rgba(187,104,223,1) 0%, rgba(134,95,221,1) 48%, rgba(134,132,254,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(187,104,223,1) 0%,rgba(134,95,221,1) 48%,rgba(134,132,254,1) 100%);
+	background: linear-gradient(to right, rgba(187,104,223,1) 0%,rgba(134,95,221,1) 48%,rgba(134,132,254,1) 100%);
+}
+.bg-grey{
+	background: #F5F9FC;
+}
+.nplr{
+	padding: 0px;	
+}
+.npl{
+	padding-left:0px;	
+}
+.npr{
+	padding-right:0px;	
+}
+#particles-js{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	background-image: url('');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.scroll-item{
+	position: absolute;
+}
+
+/* ==========================================================================
+   4.0 Banner Styling
+   ========================================================================== */
+.hero{
+	position: relative;
+	overflow: hidden;
+}
+.hero.bg-img{
+	background-size: cover;
+}
+.hero-content{
+	height: 600px;
+	position: relative;
+}
+.hero-content img{
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	transform:translateX(-50%);
+}
+.hero-content .intro-text{
+	padding-top: 120px;
+	color: #fff;
+	z-index: 10;
+	width: 650px;
+	margin: 0 auto;
+}
+.hero-content .sub-input .btn {
+    right: 8px;
+}
+.hero-content .mockup{
+	position:absolute;
+	top: 60px;
+	right: 0;
+}
+.hero-content .intro-text p{
+	line-height: 28px;
+}
+.hero-content .intro-text .intro-heading{
+	font-size: 70px;
+	font-family:'montserrat';
+	font-weight: 600;
+}
+/* ==========================================================================
+    6.0 Feature Styling
+   ========================================================================== */
+.d-item{
+	position: relative;
+	transition: 0.5s;
+	cursor: pointer;
+	background: #fff;
+	margin-top: 30px;
+	border: 1px solid #f2f2f2;
+}
+.feature-icon{
+	font-size: 36px;
+	height: 75px;
+	width: 75px;
+	margin: 0 auto;
+	padding-top: 17px;
+	color: #FF66A3;
+	background: url('../image/icon-bg.png')no-repeat;
+}
+.d-item:hover {
+	transform:translateY(-10px);
+	z-index: 1;
+	cursor: default;
+	box-shadow: 0px 20px 40px rgba(123, 128, 222, 0.2);
+} 
+.feature .feature-colum h4{
+	margin: 30px 0 10px 0;
+	color: #263238;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: capitalize;
+} 
+.feature .feature-colum p{
+	padding-top:16px;
+	clear: both; 
+}
+
+/* ==========================================================================
+   16.0 Footer Styling
+   ========================================================================== */
+.footer-wrapper{
+	padding: 50px 0px;
+}
+.footer-wrapper .social-holder{
+	text-align: center;
+}
+.footer-wrapper .social-holder a{
+	margin-right: 15px;
+}
+.footer-wrapper .social-holder a:last-child{
+	margin-right: 0px;
+}
+.footer-wrapper .social-holder i{
+	font-size: 14px;
+	height: 30px;
+	width: 30px;
+	background: #FF66A3;
+	color: #fff;
+	border-radius: 50px;
+	padding-top: 8px;
+
+}
+.footer-wrapper .copyright{
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* ==========================================================================
+   17.0 Responsive CSS
+   ========================================================================== */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	body{
+		font-size: 13px;
+	}
+	.res-margin{
+		margin-bottom: 50px;
+	}
+	.sec-pad {
+	    padding: 70px 0px;
+	}
+	.sec-pad-lg{
+		padding: 90px 0;
+	}
+	.navbar-custom ul li {
+	    margin: 0 10px;
+	}
+	.navbar-custom .navbar-nav > li > a {
+		font-size:11px; 
+	}
+	.hero-content {
+	    height: 650px;
+	}
+	.hero-content .intro-text{
+		width: 370px;
+	}
+	.hero-content .intro-text .intro-heading{
+		font-size: 48px;
+	}
+	.hero-content .mockup {
+		top: 30px;
+		max-width: 350px;
+	}
+	.about-app .abt-text {
+		padding-top: 10px;
+	}
+	.about-app .abt-text h2{
+		font-size: 40px;
+	}
+	.feature .section-text {
+		padding: 0 40px 10px 40px;
+	}
+	.specification-mockup{
+		margin-top: 25px;
+	}
+	.team-member.sec-pad{
+		padding-bottom: 45px;
+	}
+	.download .scrl-img-3 {
+	    right: 0;
+	    width: 400px;
+	    top: -150px;
+	}
+	.faq-sec .panel-group{
+		margin-top: 0px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.container {
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    max-width: 100%;
+	}
+	.res-margin{
+		margin-bottom: 35px;
+	}
+	.sec-pad, .sec-pad-lg{
+		padding: 50px 0;
+	}
+	.flex-cont{
+		display: block;
+	}
+	.hero-content {
+	    height: 550px;
+	}
+	.screenshot .owl-carousel{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.navbar-custom, .navbar-custom.affix{
+		padding: 0px;
+		background: #fff;
+		box-shadow: 0px 0px 5px #000;
+		-webkit-box-shadow: 0px 0px 5px #000;
+		-moz-box-shadow: 0px 0px 5px #000;
+		border-bottom: 0px;
+		-webkit-box-shadow: 0 11px 27px rgba(0,0,0,.03);
+		-moz-box-shadow: 0 11px 27px rgba(0,0,0,.03);
+		box-shadow: 0 11px 27px rgba(0,0,0,.03);
+		text-align: center;
+	}
+	.navbar-custom .navbar-brand {
+	    padding: 8px 0 0 0;
+	}
+	.navbar-custom .navbar-brand.logo-clr{
+	    opacity: 1;
+	    width: auto;
+	}
+	.navbar-custom .navbar-brand.logo-light{
+		width: 0;
+		opacity: 0;
+	} 
+	.navbar-custom ul li {
+		margin: 0 10px;
+	}
+	.navbar-custom .navbar-nav  li  a{
+		font-weight: 700;
+		color: inherit;
+	}
+	.navbar-custom ul li:last-child a{
+		padding: 0 20px 0 20px;
+		line-height: 32px;
+	}
+	.navbar-nav li a.active, .navbar-custom ul li a:hover {
+		border-bottom: 0px;
+	}
+	.hero-content .intro-text .button a {
+		padding: 0;
+		margin-top: 25px;
+	}
+	.overview {
+	    margin-bottom: 50px;
+	    display:block;
+	}
+	.sub-input .custom-form .btn{
+		padding: 4px 14px;
+		font-size: 14px;
+		top: 10px;
+	}
+	.screenshot .owl-carousel::after {
+	    display: none
+	}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.container{
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.hero-content .intro-text {
+	    width: auto;
+	}
+	.download .download-text h1{
+		font-size: 36px;
+		line-height: 38px;
+	}
+	.custom-form .form-control{
+		padding: 0 10px 0 70px;
+	}
+	.sub-input .custom-form .btn{
+		position: static;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.sub-input .custom-form .form-control{
+		padding: 0 60px;
+	}
+	.sub-input .custom-form label {
+	    top: 14%;
+	}
+	.btn{
+		margin-top: 15px;
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 360px) {
+	.navbar-brand img{
+		width: 150px;
+		padding-top: 5px;
+	}
+}
