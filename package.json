@@ -1,0 +1,8 @@
+{
+  "name": "nitrox-langing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "aws s3 sync src/ s3://nitrox.io"
+  }
+}
