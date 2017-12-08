@@ -778,7 +778,6 @@ img{
 	transition:0.5s;
 	transform:scale(1);
 	background: #fff;
-
 }
 .pricing .pricing-table.main{
 	transform:scale(1.25);
@@ -801,6 +800,9 @@ img{
 }
 .pricing .pricing-footer{
 	margin:50px 0px;
+}
+.pricing-device{
+  font-weight: 400;
 }
 
 /* ==========================================================================
