@@ -13,7 +13,7 @@
         $(".tab>.tab-content").eq(index).addClass("active");
     });
     /* ==========================================================================
-    
+
     ========================================================================== */
     var $vdoPop = $('.video');
     if($vdoPop.length > 0){
@@ -88,7 +88,7 @@
 /* ==========================================================================
     Testimonial Carousel
 ========================================================================== */
-  
+
   var quoteCarousel = $('#quote')
     if(quoteCarousel.length > 0){
         quoteCarousel.owlCarousel({
@@ -115,38 +115,57 @@
     ========================================================================== */
     new WOW().init();
 
-    
+
   /* ==========================================================================
-      Mailchimp Form
+      Beta Sign-up Form
     ========================================================================== */
     $('.subscribe form').submit(function(e) {
         e.preventDefault();
-        var postdata = $('.subscribe form').serialize();
+        var postdata = {
+            feedback:{
+                source: 'Nitrox beta sign-up',
+                body: {
+                    name: '',
+                    email: $('.subscribe input').val()
+                }
+            }
+        };
         $.ajax({
             type: 'POST',
-            url: 'assets/subscribe.php',
+            url: 'https://zachlevy-api-production.herokuapp.com/feedbacks',
             data: postdata,
             dataType: 'json',
-            success: function(json) {
-                if(json.valid == 0) {
+            success: function(msg,textStatus,jqXHR) {
+                if(jqXHR.status===201){
                     $('.success-message').hide();
                     $('.error-message').hide();
-                    $('.error-message').html(json.message);
+                    $('.error-message').html('Thank you, we will be in touch!');
                     $('.error-message').fadeIn('fast', function(){
                         $('.subscribe form').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                             $(this).removeClass('animated shake');
                         });
                     });
                 }
-                else {
-                    $('.error-message').hide();
+                else{
                     $('.success-message').hide();
-                    $('.subscribe form').hide();
-                    $('.success-message').html(json.message);
-                    $('.success-message').fadeIn('fast', function(){
-                        $('.top-content').backstretch("resize");
+                    $('.error-message').hide();
+                    $('.error-message').html('Opps something went wrong, please try again...');
+                    $('.error-message').fadeIn('fast', function(){
+                        $('.subscribe form').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            $(this).removeClass('animated shake');
+                        });
                     });
                 }
+            },
+            error:function(msg,textStatus,jqXHR) {
+                $('.success-message').hide();
+                $('.error-message').hide();
+                $('.error-message').html('Opps something went wrong, please try again...');
+                $('.error-message').fadeIn('fast', function(){
+                    $('.subscribe form').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $(this).removeClass('animated shake');
+                    });
+                });
             }
         });
     });
@@ -158,7 +177,7 @@
     if($navItem.length > 0 ){
         $navItem.on('click', function (e) {
             $(document).off("scroll");
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
                 || location.hostname == this.hostname) {
 
                 var target = $(this.hash),
@@ -178,4 +197,4 @@
 
 
 
-})(jQuery); 
+})(jQuery);
