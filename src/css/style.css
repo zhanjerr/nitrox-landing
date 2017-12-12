@@ -905,7 +905,7 @@ img{
 		padding: 0;
 	}
 	.navbar-custom.affix{
-		padding: 0;
+    padding-top:0;
 	}
 	.navbar-nav {
 		text-align: center;
