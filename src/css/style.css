@@ -796,7 +796,7 @@ img{
 	color:  #46da60;
 }
 .pricing .pricing-content .pricing-feature li{
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .pricing .pricing-footer{
 	margin:50px 0px;
